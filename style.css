@@ -1,0 +1,288 @@
+body {
+  font-family: "Prompt", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  background: white;
+  margin: 0;
+  padding: 40px;
+  text-align: left;
+  position: relative;}
+
+h1{
+  font-family: "Bagel Fat One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: crimson;
+}
+
+
+.home-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 80vh;
+}
+
+.home-layout .left {
+  width: 55%;
+}
+
+.home-layout h1 {
+  font-size: 52px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.home-layout p {
+  font-size: 17px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.home-layout .right {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn {
+  padding: 15px 20px;
+  background: #000;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #333;
+}
+
+.page-center {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.song-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cover {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.song-info {
+  flex: 1;
+}
+
+.song-info strong {
+  font-size: 26px;
+  font-weight: 700;
+  color: #000;
+}
+
+.song-info span {
+  font-size: 18px;
+  color: #444;
+}
+
+.fav-btn {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+input[type="text"],
+input[type="search"] {
+  width: 320px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.2s;
+  background: #f7f7f7;
+  margin-bottom: 20px;
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus {
+  border-color: #333;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+#search {
+  align-self: flex-end;
+  width: 300px;
+  margin-bottom: 20px;
+}
+ 
+  .back-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    padding: 10px 18px;
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: 80px;
+  align-self: flex-start;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: none;
+  background: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.filter-btn:hover {
+  background: #ddd;
+}
+
+.filter-btn.active {
+  background: #000;
+  color: #fff;
+}
+.delete-btn {
+  padding: 10px;
+  background: crimson;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #a30000;
+}
+
+.delete-btn svg {
+  pointer-events: none;
+}
+
+
+
+
+
+.home-layout h1 {
+  font-family: "Bagel Fat One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: crimson;
+}
+.add-page #search {
+  align-self: flex-start;
+}
+
+.form-box {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.notify {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #000;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.notify {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #000;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.notify {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #000;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.notify {
+  position: fixed;
+  top:300px;
+  right: 100px;
+  background: #000;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.notify.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

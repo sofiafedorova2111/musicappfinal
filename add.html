@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Song</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Add a New Song</h1>
+
+  <form id="addSongForm">
+    <label for="title">Song Title</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="artist">Artist</label>
+    <input type="text" id="artist" name="artist" required>
+
+    <label for="album">Album</label>
+    <input type="text" id="album" name="album">
+
+    <label for="cover">Cover Image URL</label>
+    <input type="url" id="cover" name="cover">
+
+    <button type="submit">Add Song</button>
+  </form>
+
+  <script>
+    document.getElementById("addSongForm").onsubmit = async (e) => {
+      e.preventDefault();
+
+      const song = {
+        title: title.value,
+        artist: artist.value,
+        album: album.value,
+        cover: cover.value
+      };
+
+      await fetch("/songs", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(song)
+      });
+
+      alert("Song added");
+      e.target.reset();
+    };
+  </script>
+
+</body>
+</html>
