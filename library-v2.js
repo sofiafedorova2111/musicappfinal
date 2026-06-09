@@ -1,4 +1,4 @@
-const API_URL = "https://sofia-music-api.onrender.com";
+const API_URL = "https://sofia-music-api.onrender.com/songs";
 
 const searchInput = document.getElementById("search");
 const songList = document.getElementById("song-list");
@@ -7,7 +7,7 @@ const showFavBtn = document.getElementById("show-favorites");
 
 let allSongs = [];
 
-// Load songs from backend
+
 async function loadSongs() {
   try {
     const response = await fetch(API_URL);
@@ -19,7 +19,7 @@ async function loadSongs() {
   }
 }
 
-// Render songs
+
 function renderSongs(songs) {
   songList.innerHTML = "";
 
@@ -54,7 +54,7 @@ function renderSongs(songs) {
   });
 }
 
-// Search
+
 searchInput.addEventListener("input", () => {
   const text = searchInput.value.toLowerCase();
 
@@ -67,7 +67,7 @@ searchInput.addEventListener("input", () => {
   renderSongs(results);
 });
 
-// Favorite toggle
+
 songList.addEventListener("click", async (event) => {
   if (!event.target.classList.contains("fav-btn")) return;
 
@@ -90,14 +90,14 @@ songList.addEventListener("click", async (event) => {
   }
 });
 
-// Filter: All
+
 showAllBtn.addEventListener("click", () => {
   renderSongs(allSongs);
   showAllBtn.classList.add("active");
   showFavBtn.classList.remove("active");
 });
 
-// Filter: Favorites
+
 showFavBtn.addEventListener("click", () => {
   const favorites = allSongs.filter(song => song.favorite);
   renderSongs(favorites);
@@ -105,7 +105,7 @@ showFavBtn.addEventListener("click", () => {
   showAllBtn.classList.remove("active");
 });
 
-// Delete song
+
 document.addEventListener("click", async (e) => {
   const btn = e.target.closest(".delete-btn");
   if (!btn) return;
@@ -120,7 +120,7 @@ document.addEventListener("click", async (e) => {
   loadSongs();
 });
 
-// Notification
+
 function showNotification(message) {
   const notify = document.getElementById("notify");
   notify.textContent = message;
