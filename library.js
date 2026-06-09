@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/songs";
+const API_URL = "https://sofia-music-api.onrender.com";
 
 const searchInput = document.getElementById("search");
 const songList = document.getElementById("song-list");

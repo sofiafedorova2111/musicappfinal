@@ -1,5 +1,5 @@
 async function Songs() {
-  const songs = await (await fetch("http://localhost:3000/songs")).json();
+  const songs = await (await fetch("https://sofia-music-api.onrender.com")).json();
   renderSongs(songs);
 
   document.getElementById("search").addEventListener("input", e => {
