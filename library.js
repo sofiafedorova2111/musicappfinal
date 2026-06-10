@@ -120,7 +120,6 @@ document.addEventListener("click", async (e) => {
   loadSongs();
 });
 
-
 function showNotification(message) {
   const notify = document.getElementById("notify");
   notify.textContent = message;
